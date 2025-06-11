@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout titulo="Reservar - Cafetería La Gran Aroma">
+	<h1 class="text-center text-5xl mt-24">- Reservar -</h1>
+	<p class="text-center my-12 text-lg">En este formulario puedes contactar con nosotros para reservar el día y la hora que te convengan.</p>
+	<form class="bg-white rounded-2xl py-4 px-8 mx-auto w-fit shadow-2xl text-start mb-24" autocapitalize="on">
+		<h2 class="text-2xl font-medium mt-4 mb-12">Formulario de reserva</h2>
+		<div class="my-8">
+			<label>Nombre completo:</label>
+			<input class="bg-gray-200 rounded-2xl mx-4 h-8 p-4" placeholder="Juan García Díaz" type="text" required autocapitalize="on" />
+		</div>
+		<div class="my-8">
+			<label>Telefono de contacto:</label>
+			<input class="bg-gray-200 rounded-2xl mx-4 h-8 p-4" placeholder="+34 618 614 841" type="tel" required />
+		</div>
+		<div class="my-8">
+			<label>Seleccione dia de la reserva:</label>
+			<input class="bg-gray-200 rounded-2xl mx-4 h-8 p-4" type="date" required />
+		</div>
+		<div class="my-8">
+			<label>Seleccione hora de la reserva:</label>
+			<input class="bg-gray-200 rounded-2xl mx-4 h-8 p-4" type="time" required />
+		</div>
+		<div class="my-8">
+			<label>Seleccione para cuantas personas es la reserva:</label>
+			<input class="bg-gray-200 rounded-2xl mx-4 h-8 p-4" type="number" value="1" min="1" max="24" required />
+		</div>
+		<input type="submit" class="cursor-pointer bg-gray-200 px-8 py-4 rounded-2xl text-xl font-semibold hover:bg-gray-400 transition">
+	</form>
+</Layout>
