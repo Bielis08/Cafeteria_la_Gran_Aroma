@@ -1,7 +1,12 @@
 ---
 import './src/styles/global.css'
 const { titulo } = Astro.props
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import '@fontsource/dm-serif-text';
+import { ClientRouter } from 'astro:transitions';
 ---
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -11,7 +16,12 @@ const { titulo } = Astro.props
 		<title>{titulo}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="grid min-h-dvh grid-rows-[auto_1fr_auto]">
+			<Header />
+			<slot />
+			<Footer />
+		</div>
+		<ClientRouter />
 	</body>
 </html>
 
